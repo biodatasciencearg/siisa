@@ -12,24 +12,7 @@ WHERE dbo.RulePolicyExecutionDumps.executionId = 1419591
 SELECT * from dbo.RulePolicyExecutions
 WHERE dbo.RulePolicyExecutions.executionId = 1419591
 
----intento de hacer un PIVOT TABLE de modo tal que me ponga las variables como columnas.
-DECLARE @DynamicPivotQuery AS NVARCHAR(MAX)
-DECLARE @ColumnName AS NVARCHAR(MAX)
  
---Get distinct values of the PIVOT Column 
-SELECT @ColumnName= ISNULL(@ColumnName + ',','') 
-       + QUOTENAME(dbo.RulePolicyExecutionDumps.executionId)
-FROM (SELECT DISTINCT dbo.RulePolicyExecutionDumps.executionId FROM dbo.RulePolicyExecutionDumps WHERE dbo.RulePolicyExecutionDumps.executionId = 1419591 ) AS executionId
- 
---Prepare the PIVOT query using the dynamic 
-SET @DynamicPivotQuery = 
-  N'SELECT varName, ' + @ColumnName + '
-    FROM dbo.RulePolicyExecutionDumps
-    PIVOT(SUM(dbo.RulePolicyExecutionDumps.varValue) 
-          FOR dbo.RulePolicyExecutionDumps.executionId IN (' + @ColumnName + ')) AS PVTTable'
---Execute the Dynamic Pivot Query
-EXEC sp_executesql @DynamicPivotQuery
-
 --SELECT top 5 * FROM dbo.RulePolicyExecutionDumps  WHERE (dbo.RulePolicyExecutionDumps.varName LIKE '*veraz*')
 
 select top 15 dbo.RulePolicyExecutionDumps.executionId
@@ -49,6 +32,5 @@ where (dbo.RulePolicyExecutionDumps.executionId IN (select  dbo.RulePolicyExecut
 
 select top 20 * from dbo.RulePolicyParameters
 
-
-
-
+select count(*)  from dbo.RulePolicyExecutions WHERE (dbo.RulePolicyExecutions.clientId=113)  AND (dbo.RulePolicyExecutions.policyId = 10)
+select top 10 * from dbo.RulePolicyExecutions WHERE (dbo.RulePolicyExecutions.clientId=113)  AND (dbo.RulePolicyExecutions.policyId = 10)

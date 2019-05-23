@@ -12,9 +12,9 @@ EXEC   @return_value = [dbo].[sp_export_dumps]
 
              @clientId = 127,
 
-             @policyId = 1,
+             @policyId = -1,
 
-             @from = N'20190422',
+             @from = N'20190510',
 
              @to = N'20190522'
 
