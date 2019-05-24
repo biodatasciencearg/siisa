@@ -6,13 +6,13 @@ declare      @clientId smallint,
 
        @to varchar(10)
 
-       set @clientId = 127
+       set @clientId = 133
 
        set @policyId = 1
 
-       set    @from = N'20181122'
+       set    @from = N'20190324'
 
-       set    @to = N'20190522'
+       set    @to = N'20190524'
 
        select executionId,convert(varchar(500),executionDate,103) executionDate,cast(cast(executionDate as time) as varchar(5)) executionDateTime,policyId,isnull(policyVersion,0) policyVersion into #tmp from rulepolicyexecutions
 
