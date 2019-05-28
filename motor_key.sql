@@ -15,8 +15,6 @@ WHERE dbo.RulePolicyExecutions.executionId = 1419591
  
 --SELECT top 5 * FROM dbo.RulePolicyExecutionDumps  WHERE (dbo.RulePolicyExecutionDumps.varName LIKE '*veraz*')
 
-select top 15 dbo.RulePolicyExecutionDumps.executionId
-
 SELECT * from dbo.RulePolicyExecutions
 WHERE dbo.RulePolicyExecutions.executionId = 1715351
 
@@ -32,5 +30,36 @@ where (dbo.RulePolicyExecutionDumps.executionId IN (select  dbo.RulePolicyExecut
 
 select top 20 * from dbo.RulePolicyParameters
 
-select count(*)  from dbo.RulePolicyExecutions WHERE (dbo.RulePolicyExecutions.clientId=113)  AND (dbo.RulePolicyExecutions.policyId = 10)
-select top 10 * from dbo.RulePolicyExecutions WHERE (dbo.RulePolicyExecutions.clientId=113)  AND (dbo.RulePolicyExecutions.policyId = 10)
+select count(*)  from dbo.RulePolicyExecutions WHERE (dbo.RulePolicyExecutions.clientId=133)  AND (dbo.RulePolicyExecutions.policyId = 1)
+select top 10 * from dbo.RulePolicyExecutions WHERE (dbo.RulePolicyExecutions.clientId=133)  AND (dbo.RulePolicyExecutions.policyId = 1)
+
+select * from information_schema.columns
+where TABLE_NAME='RulePolicyExecutionDumps'
+
+
+      FOR JSON AUTO
+
+select  * from dbo.RulePolicyExecutionDumps
+WHERE dbo.RulePolicyExecutionDumps.executionId = 1419591
+FOR JSON AUTO
+
+
+SELECT   * from dbo.variablesVeraz
+
+
+SELECT * from dbo.RulePolicyExecutions
+WHERE dbo.RulePolicyExecutions.executionId = 1715351
+
+SELECT *
+FROM dbo.RulePolicyExecutions
+WHERE dbo.RulePolicyExecutions.executionId < '20190526' AND dbo.RulePolicyExecutions.executionId > '20190525'
+
+
+----query para traerme la data de dumps para un dado bloque de tiempo.
+select  * from dbo.RulePolicyExecutionDumps
+WHERE dbo.RulePolicyExecutionDumps.executionId  IN (
+select dbo.RulePolicyExecutions.executionId
+  from dbo.RulePolicyExecutions
+ where dbo.RulePolicyExecutions.executionDate between '20190301 00:00:00' and '20190301 00:01:00')
+ ----------------------------------------------------------------------------------------------------------
+

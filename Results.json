@@ -1,0 +1,982 @@
+[
+  {
+    "executionId": "1998473",
+    "varName": "apellidoNombre",
+    "varValue": "MORALES YANINA TERESA"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "callErrorMessage",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "callOK",
+    "varValue": "True"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "cartasur_actividadLaboral",
+    "varValue": "Privada"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "cartasur_antLaboralGral",
+    "varValue": "2691"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "cartasur_canal",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "cartasur_cartera",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "cartasur_diasAtraso",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "cartasur_diasCancelacion",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "cartasur_edad",
+    "varValue": "27"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "cartasur_fNac",
+    "varValue": "19911015"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "cartasur_ingresos",
+    "varValue": "24000"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "cartasur_juicioCancelado",
+    "varValue": "False"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "cartasur_limiteCompra",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "cartasur_maxSitTar",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "cartasur_metal",
+    "varValue": "ORO"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "cartasur_montoSolicitado",
+    "varValue": "5000"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "cartasur_nroTramite",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "cartasur_saldo",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "cartasur_sucursal",
+    "varValue": "231"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "cuil",
+    "varValue": "27366417015"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "decisionResult",
+    "varValue": "OK|44000|Codigo rol:31906564"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "Grupo_sucursal",
+    "varValue": "1"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "nroDoc",
+    "varValue": "36641701"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_apellidoNombre",
+    "varValue": "MORALES YANINA TERESA"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_callResult",
+    "varValue": "OK|44000|Codigo rol:31906564"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_cartasur_actividadLaboral",
+    "varValue": "Privada"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_cartasur_antLaboralGral",
+    "varValue": "2691"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_cartasur_canal",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_cartasur_cartera",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_cartasur_diasAtraso",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_cartasur_diasCancelacion",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_cartasur_edad",
+    "varValue": "27"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_cartasur_fNac",
+    "varValue": "19911015"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_cartasur_ingresos",
+    "varValue": "24000"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_cartasur_juicioCancelado",
+    "varValue": "False"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_cartasur_limiteCompra",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_cartasur_maxSitTar",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_cartasur_metal",
+    "varValue": "ORO"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_cartasur_montoSolicitado",
+    "varValue": "5000"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_cartasur_nroTramite",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_cartasur_saldo",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_cartasur_sucursal",
+    "varValue": "231"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_cuil",
+    "varValue": "27366417015"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_maximo",
+    "varValue": "44000"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_Mora_CartasurBCRA",
+    "varValue": "0.0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_nroDoc",
+    "varValue": "36641701"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_apellidoNombre",
+    "varValue": "MORALES YANINA TERESA"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_autonomo",
+    "varValue": "False"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_cacheHit",
+    "varValue": "False"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_cant1BCRA",
+    "varValue": "2"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_cantMorasBCRA",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_conQui",
+    "varValue": "False"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_consultaError",
+    "varValue": "False"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_cuil",
+    "varValue": "27366417015"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_direccionFiscal",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_direccionHist1",
+    "varValue": "JUAN MANUEL DE ROSAS 3136 1 6, CASEROS, BUENOS AIRES"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_direccionHist1Tipo",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_direccionHist2",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_direccionHist2Tipo",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_direccionHist3",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_direccionHist3Tipo",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_facturasApocrifas",
+    "varValue": "False"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_fNac",
+    "varValue": "1991"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_integraSociedades",
+    "varValue": "False"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_jubilacionFecha",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_juicios",
+    "varValue": "False"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_juiciosPosibles",
+    "varValue": "False"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_llamado",
+    "varValue": "cards/motormotor123427366417015MORALES YANINA TERESAF"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_maxBCRA",
+    "varValue": "1"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_maxBCRA12m",
+    "varValue": "1"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_maxBCRA24m",
+    "varValue": "1"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_maxBCRA6m",
+    "varValue": "1"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_monotributoCat",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_monotributoPagoCantSSS",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_monotributoPagoMaxSSS",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_monotributoPagoMinSSS",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_monto1BCRA",
+    "varValue": "55000"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_montoMorasBCRA",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_nroConsulta",
+    "varValue": "31906564"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_nseCat",
+    "varValue": "D"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_nseDesc",
+    "varValue": "Nivel Socio Econ\\u00f3mico C2 - Ingreso estimado entre $27.565 y $38.259"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_relac1",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_relac2",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_relac3",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_relac4",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_relac5",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_relac6",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_relacDom1",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_relacDom2",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_relacDom3",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_relacDom4",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_relacDom5",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_relacDom6",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_RelDepAnt1",
+    "varValue": "84"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_RelDepCuit1",
+    "varValue": "30-70829470-1"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_RelDepDom1",
+    "varValue": "AV URQUIZA 4750 - CASEROS - BUENOS AIRES"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_RelDepRazon1",
+    "varValue": "VELTRI DI BELMONTE SRL"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_RelDepSector1",
+    "varValue": "523420|464142477220"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_RelDepTel1",
+    "varValue": "(011) 4901-3313"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_sexo",
+    "varValue": "FEMENINO"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_telsCuil",
+    "varValue": "(011) 6739-4409|(011) 3134-4831"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_telsDomi",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_telsDomiFiscal",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_telsDomiUltimo",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_telsNombre",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_telsOtros",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_vecino1",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_vecino2",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_vecino3",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_vecino4",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_vecino5",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_rol_vecino6",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_sexo",
+    "varValue": "F"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_apellidoNombre",
+    "varValue": "MORALES YANINA TERESA"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_autonomo",
+    "varValue": "False"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_autonomoMeses",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_bacCompromiso",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_cacheHit",
+    "varValue": "False"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_cant1s",
+    "varValue": "2"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_cant2s",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_cant3s",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_cant4s",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_cant5s",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_cant6s",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_cantCheques",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_cantMoras",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_cantMorasBCRA",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_codR",
+    "varValue": "False"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_compromiso",
+    "varValue": "3161.11111111111"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_concursosQuiebras",
+    "varValue": "False"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_consultaError",
+    "varValue": "False"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_consultasAno",
+    "varValue": "5"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_consultasDia",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_consultasDosAno",
+    "varValue": "5"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_consultasMes",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_consultasSeisMeses",
+    "varValue": "5"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_consultasSemana",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_consultasTresMeses",
+    "varValue": "2"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_cuil",
+    "varValue": "27366417015"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_cuitsCheques",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_direccion",
+    "varValue": "JUAN MANUEL DE ROSAS 3136 1 6 - TRES DE FEBRERO -  - BUENOS AIRES"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_domValidado",
+    "varValue": "False"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_Dup1",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_Dup2",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_Dup3",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_Dup4",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_DupCuil1",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_DupCuil2",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_DupCuil3",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_DupCuil4",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_fallecido",
+    "varValue": "False"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_fnac",
+    "varValue": "1991-10-15"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_fraudes",
+    "varValue": "False"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_grupoFamiliar",
+    "varValue": "20498376607 - ACOSTA MORALES DANTE LEON - 2009-08-23"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_ingreso",
+    "varValue": "39053.88"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_jubilado",
+    "varValue": "False"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_llamado",
+    "varValue": "27-5910-5911-27366417015-0-"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_locValidada",
+    "varValue": "False"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_maxBCRA",
+    "varValue": "1"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_maxBCRA12m",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_maxBCRA24m",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_maxBCRA6m",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_monotributo",
+    "varValue": "False"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_monotributoCategoria",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_monto1s",
+    "varValue": "55000"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_monto2s",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_monto3s",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_monto4s",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_monto5s",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_monto6s",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_montoMorasBCRA",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_morasEntidades",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_morasEntidadesBcra",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_morasRazones",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_morasRazonesBcra",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_nroDoc",
+    "varValue": "36641701"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_operaYcumple",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_provValidada",
+    "varValue": "False"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_relDep",
+    "varValue": "True"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_relDepCuit",
+    "varValue": "30708294701"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_relDepDir",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_relDepMeses",
+    "varValue": "60"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_relDepRazon",
+    "varValue": "VELTRI  DI  BELMONTE  SRL                                   "
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_relDepTel",
+    "varValue": "1144641506"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_score",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_scorePoblacion",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_sectorLaboral",
+    "varValue": "Privado"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_sesCat",
+    "varValue": "5"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_sesModelo",
+    "varValue": "1"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_sexo",
+    "varValue": "F"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_subsectorLaboral",
+    "varValue": "Retail"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_telefono",
+    "varValue": ""
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_siisa_telValidado",
+    "varValue": "False"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "pol7_SumaSit_23456",
+    "varValue": "0"
+  },
+  {
+    "executionId": "1998473",
+    "varName": "sexo",
+    "varValue": "F"
+  }
+]
