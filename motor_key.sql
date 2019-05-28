@@ -30,8 +30,9 @@ where (dbo.RulePolicyExecutionDumps.executionId IN (select  dbo.RulePolicyExecut
 
 select top 20 * from dbo.RulePolicyParameters
 
-select count(*)  from dbo.RulePolicyExecutions WHERE (dbo.RulePolicyExecutions.clientId=133)  AND (dbo.RulePolicyExecutions.policyId = 1)
-select top 10 * from dbo.RulePolicyExecutions WHERE (dbo.RulePolicyExecutions.clientId=133)  AND (dbo.RulePolicyExecutions.policyId = 1)
+select count(*)  from dbo.RulePolicyExecutions WHERE (dbo.RulePolicyExecutions.clientId=127)  AND (dbo.RulePolicyExecutions.policyId = 15 AND (dbo.RulePolicyExecutions.executionDate between '20190528 15:00:00' and '20190528 16:00:00'))
+select count(*)  from dbo.RulePolicyExecutions WHERE (dbo.RulePolicyExecutions.clientId=127)  AND (dbo.RulePolicyExecutions.policyId = 15 )
+select top 10 * from dbo.RulePolicyExecutions WHERE (dbo.RulePolicyExecutions.clientId=127)  AND (dbo.RulePolicyExecutions.policyId = 15)
 
 select * from information_schema.columns
 where TABLE_NAME='RulePolicyExecutionDumps'
@@ -40,8 +41,7 @@ where TABLE_NAME='RulePolicyExecutionDumps'
       FOR JSON AUTO
 
 select  * from dbo.RulePolicyExecutionDumps
-WHERE dbo.RulePolicyExecutionDumps.executionId = 1419591
-FOR JSON AUTO
+WHERE dbo.RulePolicyExecutionDumps.executionId = 1998473
 
 
 SELECT   * from dbo.variablesVeraz
@@ -60,6 +60,10 @@ select  * from dbo.RulePolicyExecutionDumps
 WHERE dbo.RulePolicyExecutionDumps.executionId  IN (
 select dbo.RulePolicyExecutions.executionId
   from dbo.RulePolicyExecutions
- where dbo.RulePolicyExecutions.executionDate between '20190301 00:00:00' and '20190301 00:01:00')
+ where ((dbo.RulePolicyExecutions.executionDate between '20190528 15:00:00' and '20190528 16:00:00') AND (dbo.RulePolicyExecutions.clientId=127)  AND (dbo.RulePolicyExecutions.policyId = 15))
  ----------------------------------------------------------------------------------------------------------
+
+
+select count(*)  from dbo.RulePolicyExecutions WHERE (dbo.RulePolicyExecutions.clientId=127)  AND (dbo.RulePolicyExecutions.policyId = 15 AND (dbo.RulePolicyExecutions.executionDate between '20190528 15:00:00' and '20190528 16:00:00'))
+
 
