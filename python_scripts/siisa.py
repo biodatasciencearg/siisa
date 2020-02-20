@@ -301,13 +301,13 @@ def get_pureza_captura_plot(modelList,le):
 hide_toggle()
 
 
-def get_ks(df,column_score_name):
+def get_ks(df,column_score_name,nbins=10):
     import numpy as np
     import matplotlib.pyplot as plt
     import seaborn as sns
     data=df.copy()
     data['good'] = 1 - data.bad
-    data['bucket'] = pd.qcut(data[column_score_name], 10)
+    data['bucket'] = pd.qcut(data[column_score_name], nbins)
     # GROUP THE DATA FRAME BY BUCKETS
     grouped = data.groupby('bucket', as_index = False)
     # CREATE A SUMMARY DATA FRAME
@@ -332,8 +332,8 @@ def get_ks(df,column_score_name):
     # FLAG OUT MAX KS
     agg2['max_ks'] = agg2.ks.apply(flag)
     print(agg2.ks.mean())
-    plt.plot(list(range(1,11)),agg2.cumsum_bads)
-    plt.plot(list(range(1,11)),agg2.cumsum_goods)
+    plt.plot(list(range(1,(nbins+1))),agg2.cumsum_bads)
+    plt.plot(list(range(1,(nbins+1))),agg2.cumsum_goods)
     return agg2
 
 def get_ks_max(df,column_score_name):
@@ -453,10 +453,44 @@ def get_tabla_dual(df):
     display(scores_df.groupby('categories_incremento')['bad'].mean()*100)
     dual_c=pd.concat([scores_df.groupby(['categories_originacion','categories_incremento'])['bad'].count().unstack().fillna(0),(scores_df.groupby(['categories_originacion','categories_incremento'])['bad'].mean()*100).unstack().fillna(0)],axis=1)
     dual_s=pd.concat([scores_df.groupby(['categories_originacion','categories_incremento'])['bad'].sum().unstack().fillna(0),(scores_df.groupby(['categories_originacion','categories_incremento'])['bad'].mean()*100).unstack().fillna(0)],axis=1)
+    print('promedio:',np.mean([item for sublist in dual_c.iloc[1:,6:].values for item in sublist]))
     display(dual_c)
     display(dual_s)
+
+def get_mora_ftable(df):
+    scores_df=df.copy()
+    scores_df['categories_originacion'], edges_o = pd.qcut(scores_df.score, 5, retbins=True)
+    scores_df['categories_incremento'], edges_i = pd.qcut(scores_df.score_incr, 5, retbins=True)
+    t=scores_df.groupby('categories_originacion')['bad'].mean()*100
+    display(t)
     
-def get_GeraldPlot(source='PADRON',rplot=False,niter=100):
+
+def get_N_samples_scores(N,df_porcentajes,origen='PADRON'):
+    """Obtengo una muestra de tamanio N representado una muestra de PADRON/CONSULTAS de siisa
+    Ejemplo: get_N_samples(1000,PADRON,df_porcentajes)
+    donde df_porcentajes es un df donde esta la distribucion por scorecard de la poblacion original."""
+    for scrd in [3,4,5]:
+        if origen=='PADRON':
+            origen_sel = df_porcentajes[df_porcentajes.index=='PADRON']
+        if origen=='CONSULTAS':
+            origen_sel = df_porcentajes[df_porcentajes.index=='CONSULTAS']
+        n_sel  = round(float(N*(origen_sel[scrd].values/100)))
+        if scrd==3:
+            row_sel_3 = df3.sample(n_sel)
+            row_sel_3['score_incr']=si.score(model_sc3,scaler_sc3.transform(row_sel_3[vars_sc3]))
+            row_sel_3['scorecard']=3
+        if scrd==4:
+            row_sel_4 = df4.sample(n_sel)
+            row_sel_4['score_incr']=si.score(model_sc4,scaler_sc4.transform(row_sel_4[vars_sc4]))
+            row_sel_4['scorecard']=4
+        if scrd==5:
+            row_sel_5 = df5.sample(n_sel)
+            row_sel_5['score_incr']=si.score(model_sc5,scaler_sc5.transform(row_sel_5[vars_sc5]))
+            row_sel_5['scorecard']=5
+    # Agrego los subDfs todos juntos.
+    return pd.concat([row_sel_3[['score_incr','score','scorecard','bad']],row_sel_4[['score_incr','score','scorecard','bad']],row_sel_5[['score_incr','score','scorecard','bad']]],axis=0) 
+    
+def get_GeraldPlot(src='PADRON',rplot=False,niter=100):
     """Funcion que a partir de un df devuelve el grafico de barras ordenado por categoria. """
     from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
     import plotly.graph_objs as go
@@ -504,3 +538,25 @@ def get_GeraldPlot(source='PADRON',rplot=False,niter=100):
         f.write_html("file.html")
         f.write_image()
     return f
+def get_incremento_tables (df,labels=['bajo','medio','alto'],cocientename='ratio_capital_monto',scorename='score',badname='bad',show_edges=False):
+    """Argumentos lista de grupos de incrementos. La lista supone grupos ordenados de menor a mayor en el incremento de deuda
+    df es un dataframe que contiene la marca de bad y el score que queremos testear """
+    df_current = df.copy()
+    # Genero los intervalos de score
+    scores,edges = pd.qcut(df_current[scorename],5,retbins=True)
+    df_current.loc[:,'bins']=scores.copy()
+    # Genero los N grupos de incremento.
+    quantiles_cociente, edges_cociente = pd.qcut(df_current[cocientename],len(labels),labels=labels,retbins=True) 
+    df_current['quantiles'] = quantiles_cociente.copy()
+    if show_edges:
+        print(cocientename,edges_cociente)
+        print(scorename,edges)
+    concat_list = []
+    for grupo in labels:
+        grupo = df_current[df_current['quantiles']==grupo]
+        grupo = grupo.groupby('bins')[badname].mean()*100
+        #grupo = grupo.groupby('bins')[badname].count()
+        concat_list.append(grupo)
+    tabla_incremental = pd.concat(concat_list,axis=1)
+    tabla_incremental.columns = labels
+    return tabla_incremental
