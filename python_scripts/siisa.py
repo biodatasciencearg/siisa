@@ -301,12 +301,12 @@ def get_pureza_captura_plot(modelList,le):
 hide_toggle()
 
 
-def get_ks(df,column_score_name,nbins=10):
+def get_ks(df,column_score_name,column_bad_name,nbins=10):
     import numpy as np
     import matplotlib.pyplot as plt
     import seaborn as sns
     data=df.copy()
-    data['good'] = 1 - data.bad
+    data['good'] = 1 - data[column_bad_name]
     data['bucket'] = pd.qcut(data[column_score_name], nbins)
     # GROUP THE DATA FRAME BY BUCKETS
     grouped = data.groupby('bucket', as_index = False)
@@ -314,19 +314,19 @@ def get_ks(df,column_score_name,nbins=10):
     agg1 = pd.DataFrame(grouped.min()[column_score_name])
     agg1.columns=['min_scr']
     agg1['max_scr'] = grouped.max()[column_score_name]
-    agg1['bads'] = grouped.sum().bad
+    agg1['bads'] = grouped.sum()[column_bad_name]
     agg1['goods'] = grouped.sum().good
     agg1['total'] = agg1.bads + agg1.goods
     
     # SORT THE DATA FRAME BY SCORE
     agg2 = (agg1.sort_values(by = 'min_scr')).reset_index(drop = True)
-    agg2['cumsum_bads']= np.round(((agg2.bads / data.bad.sum()).cumsum()), 4) * 100
+    agg2['cumsum_bads']= np.round(((agg2.bads / data[column_bad_name].sum()).cumsum()), 4) * 100
     agg2['cumsum_goods']=np.round(((agg2.goods / data.good.sum()).cumsum()), 4) * 100
     agg2['odds'] = (agg2.goods / agg2.bads).apply('{0:.2f}'.format)
     agg2['bad_rate'] = (agg2.bads / agg2.total).apply('{0:.2%}'.format)
-    
+    agg2['WOE'] = np.log( (agg2.goods / agg2.goods.sum()) / (agg2.bads / agg2.bads.sum()) ) 
     # CALCULATE KS STATISTIC
-    agg2['ks'] = np.round(((agg2.bads / data.bad.sum()).cumsum() - (agg2.goods / data.good.sum()).cumsum()), 4) * 100
+    agg2['ks'] = np.round(((agg2.bads / data[column_bad_name].sum()).cumsum() - (agg2.goods / data.good.sum()).cumsum()), 4) * 100
     # DEFINE A FUNCTION TO FLAG MAX KS
     flag = lambda x: '<----' if x == agg2.ks.max() else ''
     # FLAG OUT MAX KS
@@ -560,3 +560,69 @@ def get_incremento_tables (df,labels=['bajo','medio','alto'],cocientename='ratio
     tabla_incremental = pd.concat(concat_list,axis=1)
     tabla_incremental.columns = labels
     return tabla_incremental
+
+
+
+
+def run_score(cuil,fecha):
+    """ funcion que a partir de un cuil y fecha corre magia negra"""
+    import pyodbc 
+    # Some other example server values are
+    # server = 'localhost\sqlexpress' # for a named instance
+    # server = 'myserver,port' # to specify an alternate port
+    server = 'tcp:190.221.2.14' 
+    database = 'felitest' 
+    username = 'felipe' 
+    password = 'f3l1p3' 
+    cnxn = pyodbc.connect('DRIVER={ODBC Driver 13 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
+    cursor = cnxn.cursor()
+    # Selected Query.
+    query = """
+    declare @cuil numeric(11) = {}, @fecha date = \'{}\' exec cobranzas.dbo.magianegra @cuil, @fecha, 0, 700 """.format(cuil,fecha)
+    cursor.execute(query)
+    cnxn.commit()
+    # Close and delete cursor
+    cursor.close()
+    del cursor
+    # Close Connection
+    cnxn.close() 
+    
+def run_score_incr(cuil,fecha):
+    """ funcion que a partir de un cuil y fecha corre score incremental"""
+    import pyodbc 
+    # Some other example server values are
+    # server = 'localhost\sqlexpress' # for a named instance
+    # server = 'myserver,port' # to specify an alternate port
+    server = 'tcp:190.221.2.14' 
+    database = 'felitest' 
+    username = 'felipe' 
+    password = 'f3l1p3' 
+    cnxn = pyodbc.connect('DRIVER={ODBC Driver 13 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
+    cursor = cnxn.cursor()
+    # Selected Query.
+    query = """
+    declare @cuil numeric(11) = {}, @fecha date = \'{}\' exec feliTest.dbo.sub_scoring_incrementales @cuil, @fecha, 0, 700 """.format(cuil,fecha)
+    cursor.execute(query)
+    cnxn.commit()
+    # Close and delete cursor
+    cursor.close()
+    del cursor
+    # Close Connection
+    cnxn.close() 
+       
+    
+def run_score_df(df,cuil_column_name,date_column_name,processes=50):
+    """Funcion que envia N store procedures al servidor para paralelizar el calculo.
+    Modo de uso:
+    import siisa as si
+    si.run_score_df(df,'cuil','fecha')"""
+    import multiprocessing
+    from itertools import product
+    # topear el numero de threads al shape del df (n casos) si es menor que processes.
+    N = df.shape[0] 
+    if N < processes:
+        processes = N
+    cuil_lst = df[[cuil_column_name,date_column_name]].to_records(index=False).tolist()
+    with multiprocessing.Pool(processes=processes) as pool:
+        results = pool.starmap(run_score, cuil_lst)
+    return ('Done.')
